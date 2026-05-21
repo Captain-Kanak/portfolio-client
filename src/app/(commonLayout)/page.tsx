@@ -58,7 +58,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased selection:bg-primary/20">
       {/* HERO SECTION */}
-      <section className="container max-w-5xl mx-auto pt-24 pb-16 px-4 md:pt-32 md:pb-24 flex flex-col justify-center min-h-[70vh]">
+      <section className="container mx-auto pt-24 pb-16 px-4 md:pt-32 md:pb-24 flex flex-col justify-center min-h-[70vh]">
         <div className="space-y-4 max-w-3xl">
           <Badge
             variant="secondary"
@@ -102,7 +102,7 @@ export default function HomePage() {
       <ProjectSection featuredProjects={featuredProjects} />
 
       {/* SKILLS MATRIX SECTION */}
-      <section className="container max-w-5xl mx-auto py-16 px-4 border-t border-border/40">
+      <section className="container mx-auto py-16 px-4 border-t border-border/40">
         <div className="flex flex-col space-y-2 mb-12">
           <h2 className="text-3xl font-bold tracking-tight">
             Technical Ecosystem
@@ -142,7 +142,7 @@ export default function HomePage() {
       </section>
 
       {/* CONTACT CTA SECTION */}
-      <section className="container max-w-5xl mx-auto py-20 px-4 border-t border-border/40 text-center">
+      <section className="container mx-auto py-20 px-4 border-t border-border/40 text-center">
         <div className="max-w-xl mx-auto space-y-6">
           <h2 className="text-3xl font-bold tracking-tight">
             Let's Build Something Together
