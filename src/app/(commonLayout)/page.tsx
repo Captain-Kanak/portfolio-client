@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Mail, Server, Code, Database, Terminal } from "lucide-react";
 import ProjectSection from "@/components/layouts/ProjectSection";
+import HeroSection from "@/components/layouts/HeroSection";
 
 export interface Project {
   title: string;
@@ -58,45 +58,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased selection:bg-primary/20">
       {/* HERO SECTION */}
-      <section className="container mx-auto pt-24 pb-16 px-4 md:pt-32 md:pb-24 flex flex-col justify-center min-h-[70vh]">
-        <div className="space-y-4 max-w-3xl">
-          <Badge
-            variant="secondary"
-            className="px-3 py-1 text-sm font-medium tracking-wide"
-          >
-            Open for Opportunities
-          </Badge>
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Hi, I'm{" "}
-            <span className="text-transparent bg-linear-to-r from-primary to-blue-500 bg-clip-text">
-              Kanak
-            </span>
-          </h1>
-          <p className="text-xl text-muted-foreground font-normal leading-relaxed max-w-2xl">
-            A Full Stack Developer specializing in building robust backends with
-            Node.js, TypeScript, and Prisma, paired with highly responsive
-            interfaces.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-4 mt-8">
-          <Button asChild size="lg" className="shadow-sm">
-            <Link href="#projects">View My Work</Link>
-          </Button>
-          <Button variant="outline" size="lg" asChild>
-            <Link href="https://github.com" target="_blank">
-              {/* <Github className="mr-2 h-5 w-5" /> GitHub */}
-              GitHub
-            </Link>
-          </Button>
-          <Button variant="ghost" size="lg" asChild>
-            <Link href="https://linkedin.com" target="_blank">
-              {/* <Linkedin className="mr-2 h-5 w-5 text-blue-600" /> LinkedIn */}
-              LinkedIn
-            </Link>
-          </Button>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* FEATURED PROJECTS SECTION */}
       <ProjectSection featuredProjects={featuredProjects} />
