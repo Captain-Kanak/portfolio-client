@@ -9,5 +9,5 @@ export type Feedback = {
   deletedAt: Date | null;
   createdAt: Date;
   updatedAt: Date;
-  project: Project;
+  project?: Project;
 };

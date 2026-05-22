@@ -10,7 +10,7 @@ export interface Technology {
   deletedAt: Date | null;
   createdAt: Date;
   updatedAt: Date;
-  projectsTechnologies: ProjectTechnology[];
+  projectsTechnologies?: ProjectTechnology[];
 }
 
 export interface ProjectTechnology {
@@ -21,6 +21,6 @@ export interface ProjectTechnology {
   deletedAt: Date | null;
   createdAt: Date;
   updatedAt: Date;
-  project: Project;
-  technology: Technology;
+  project?: Project;
+  technology?: Technology;
 }

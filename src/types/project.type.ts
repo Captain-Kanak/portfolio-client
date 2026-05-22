@@ -16,6 +16,6 @@ export type Project = {
   deletedAt: Date | null;
   createdAt: Date;
   updatedAt: Date;
-  technologies: ProjectTechnology[];
-  feedbacks: Feedback[];
+  technologies?: ProjectTechnology[];
+  feedbacks?: Feedback[];
 };

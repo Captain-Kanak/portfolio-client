@@ -1,5 +1,6 @@
 import React from "react";
 import { Terminal, Code2, Database, Settings, Layers } from "lucide-react";
+import { Technology } from "@/types";
 
 interface SkillItem {
   name: string;
