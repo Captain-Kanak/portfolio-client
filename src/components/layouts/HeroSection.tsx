@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <section
       id="intro"
-      className="container max-w-7xl mx-auto pt-24 pb-16 px-4 md:pt-32 md:pb-24 min-h-[85vh] flex items-center relative overflow-hidden"
+      className="container max-w-7xl mx-auto px-4 pt-24 pb-16 md:pt-32 md:pb-24 min-h-[85vh] flex items-center relative overflow-hidden"
     >
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />

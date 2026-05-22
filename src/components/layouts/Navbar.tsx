@@ -4,7 +4,7 @@ import { ModeToggle } from "./ModeToggle";
 export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
-      <div className="container mx-auto flex items-center justify-between h-16 px-4">
+      <div className="container max-w-7xl mx-auto flex items-center justify-between h-16 px-4">
         <Link href={"/"}>
           <span className="font-bold text-lg">portfolio.</span>
         </Link>
@@ -27,9 +27,7 @@ export function Navbar() {
           </a>
         </div>
 
-        <div>
-          <ModeToggle />
-        </div>
+        <ModeToggle />
       </div>
     </nav>
   );

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Server, Code, Database, Terminal } from "lucide-react";
 import ProjectSection from "@/components/layouts/ProjectSection";
 import HeroSection from "@/components/layouts/HeroSection";
+import AboutSection from "@/components/layouts/AboutSection";
 
 export interface Project {
   title: string;
@@ -59,6 +60,9 @@ export default function HomePage() {
     <div className="min-h-screen bg-background text-foreground antialiased selection:bg-primary/20">
       {/* HERO SECTION */}
       <HeroSection />
+
+      {/* ABOUT SECTION */}
+      <AboutSection />
 
       {/* FEATURED PROJECTS SECTION */}
       <ProjectSection featuredProjects={featuredProjects} />
@@ -126,3 +130,9 @@ export default function HomePage() {
     </div>
   );
 }
+
+/* <HeroSection /> */
+/* <AboutSection />  */
+// {/* <ProjectSection /> */
+// {/* <SkillsSection /> */}
+// {/* <ContactSection /> */}
