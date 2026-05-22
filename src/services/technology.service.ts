@@ -1,11 +1,11 @@
 import { env } from "@/env";
-import { ApiResponse } from "@/types";
+import { ApiResponse, Technology } from "@/types";
 import { DataFetcherResult } from "@/types/response.type";
 
 const API_URL = env.API_URL;
 
 export const technologyService = {
-  getTechnologies: async (): Promise<ApiResponse<null>> => {
+  getTechnologies: async (): Promise<ApiResponse<Technology>> => {
     try {
       const url = `${API_URL}/api/v1/technologies`;
 
