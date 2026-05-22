@@ -4,6 +4,7 @@ import { Mail, Server, Code, Database, Terminal } from "lucide-react";
 import ProjectSection from "@/components/layouts/ProjectSection";
 import HeroSection from "@/components/layouts/HeroSection";
 import AboutSection from "@/components/layouts/AboutSection";
+import SkillsSection from "@/components/layouts/SkillsSection";
 
 export interface Project {
   title: string;
@@ -64,48 +65,11 @@ export default function HomePage() {
       {/* ABOUT SECTION */}
       <AboutSection />
 
+      {/* SKILLS MATRIX SECTION */}
+      <SkillsSection />
+
       {/* FEATURED PROJECTS SECTION */}
       <ProjectSection featuredProjects={featuredProjects} />
-
-      {/* SKILLS MATRIX SECTION */}
-      <section className="container mx-auto py-16 px-4 border-t border-border/40">
-        <div className="flex flex-col space-y-2 mb-12">
-          <h2 className="text-3xl font-bold tracking-tight">
-            Technical Ecosystem
-          </h2>
-          <p className="text-muted-foreground">
-            The languages, frameworks, and structural infrastructure tools I
-            work with daily.
-          </p>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {skillCategories.map((category) => (
-            <div
-              key={category.title}
-              className="p-5 rounded-xl border border-border/50 bg-card/50 space-y-4"
-            >
-              <div className="flex items-center space-x-3">
-                <div className="p-2 bg-primary/10 rounded-lg">
-                  {category.icon}
-                </div>
-                <h3 className="font-semibold text-lg">{category.title}</h3>
-              </div>
-              <ul className="space-y-2">
-                {category.skills.map((skill) => (
-                  <li
-                    key={skill}
-                    className="text-sm text-muted-foreground flex items-center"
-                  >
-                    <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* CONTACT CTA SECTION */}
       <section className="container mx-auto py-20 px-4 border-t border-border/40 text-center">
@@ -131,8 +95,6 @@ export default function HomePage() {
   );
 }
 
-/* <HeroSection /> */
-/* <AboutSection />  */
-// {/* <ProjectSection /> */
 // {/* <SkillsSection /> */}
+// {/* <ProjectSection /> */
 // {/* <ContactSection /> */}

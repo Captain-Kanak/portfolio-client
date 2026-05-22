@@ -20,7 +20,7 @@ export default function ProjectSection({
   return (
     <section
       id="projects"
-      className="container mx-auto py-16 px-4 border-t border-border/40"
+      className="container max-w-7xl mx-auto py-16 px-4 border-t border-border/40"
     >
       <div className="flex flex-col space-y-2 mb-12">
         <h2 className="text-3xl font-bold tracking-tight">
