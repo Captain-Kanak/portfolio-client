@@ -10,13 +10,35 @@ import {
 import { ArrowUpRight } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { Project } from "@/app/(commonLayout)/page";
 
-export default function ProjectSection({
-  featuredProjects,
-}: {
-  featuredProjects: Project[];
-}) {
+export interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  liveUrl: string;
+  githubUrl: string;
+}
+
+export default async function ProjectSection() {
+  const featuredProjects: Project[] = [
+    {
+      title: "EcoSpark-Hub",
+      description:
+        "A comprehensive sustainability platform designed to crowdsource and manage eco-friendly ideas with integrated payment logic and dynamic admin tracking.",
+      technologies: ["TypeScript", "Node.js", "Prisma", "PostgreSQL"],
+      liveUrl: "https://ecospark-hub.vercel.app",
+      githubUrl: "https://github.com",
+    },
+    {
+      title: "Medistore Dashboard",
+      description:
+        "An optimized inventory and sales management system featuring a responsive administration interface and robust product validation pipelines.",
+      technologies: ["React", "Express.js", "Zod", "Tailwind CSS"],
+      liveUrl: "https://medistore-dev.vercel.app",
+      githubUrl: "https://github.com",
+    },
+  ];
+
   return (
     <section
       id="projects"

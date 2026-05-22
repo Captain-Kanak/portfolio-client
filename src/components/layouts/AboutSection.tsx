@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="container max-w-5xl mx-auto py-20 px-4 border-t border-border/50 relative overflow-hidden"
+      className="container max-w-5xl mx-auto px-4 py-20 border-t border-border/50 relative overflow-hidden"
     >
       {/* Subtle Background Mesh Glow */}
       <div className="absolute bottom-0 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />

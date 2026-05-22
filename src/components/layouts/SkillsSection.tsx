@@ -65,7 +65,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="container max-w-7xl mx-auto py-20 px-4 border-t border-border/50 relative overflow-hidden"
+      className="container max-w-7xl mx-auto px-4 py-20 border-t border-border/50 relative overflow-hidden"
     >
       {/* Background Decorative Accent Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
