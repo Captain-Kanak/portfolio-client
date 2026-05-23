@@ -1,13 +1,23 @@
 import { env } from "@/env";
 import { ApiResponse, Technology } from "@/types";
-import { DataFetcherResult } from "@/types/response.type";
+import { DataFetcherResult, QueryParams } from "@/types/response.type";
 
 const API_URL = env.API_URL;
 
 export const technologyService = {
-  getTechnologies: async (): Promise<ApiResponse<Technology>> => {
+  getTechnologies: async (
+    params?: QueryParams,
+  ): Promise<ApiResponse<Technology[]>> => {
     try {
-      const url = `${API_URL}/api/v1/technologies`;
+      const url = new URL(`${API_URL}/api/v1/technologies`);
+
+      if (params) {
+        Object.entries(params).forEach(([key, value]) => {
+          if (value) {
+            url.searchParams.append(key, value.toString());
+          }
+        });
+      }
 
       const response = await fetch(url);
 

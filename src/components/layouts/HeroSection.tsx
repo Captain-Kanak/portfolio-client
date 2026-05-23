@@ -53,9 +53,11 @@ export default function HeroSection() {
                 <span className="text-primary">
                   <TypingEffect
                     words={[
+                      "Programmer",
                       "Full Stack Developer",
                       "Backend Architect",
                       "Systems Engineer",
+                      "Problem Solver",
                     ]}
                     typingSpeed={80}
                     deletingSpeed={40}
@@ -68,7 +70,7 @@ export default function HeroSection() {
             {/* Minimal Terminal Sub-badge */}
             <div className="flex items-center gap-2 text-xs font-mono text-muted-foreground/80 bg-muted/40 w-fit px-2.5 py-1 rounded-md border border-border/40">
               <Terminal className="w-3.5 h-3.5 text-primary" />
-              <span>const dev = "Full Stack";</span>
+              <span>const passion = "Programming";</span>
             </div>
 
             <p className="text-lg md:text-xl text-muted-foreground font-normal leading-relaxed max-w-2xl pt-2">

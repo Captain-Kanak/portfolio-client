@@ -4,13 +4,15 @@ export enum TechnologyType {
   FRONTEND = "FRONTEND",
   DATABASE = "DATABASE",
   DEVOPS = "DEVOPS",
-  TOOL = "TOOL",
-  ORM = "ORM",
   CLOUD = "CLOUD",
+  TOOL = "TOOL",
   TESTING = "TESTING",
   AUTH = "AUTH",
   API = "API",
+  ORM = "ORM",
   MOBILE = "MOBILE",
+  AI = "AI",
+  SYSTEM = "SYSTEM",
 }
 
 export enum UserStatus {

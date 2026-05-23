@@ -11,6 +11,7 @@ export interface Technology {
   createdAt: Date;
   updatedAt: Date;
   projectsTechnologies?: ProjectTechnology[];
+  _count?: { projectsTechnologies: number };
 }
 
 export interface ProjectTechnology {
