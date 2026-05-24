@@ -1,15 +1,31 @@
 import { env } from "@/env";
 import { ApiResponse, Project } from "@/types";
-import { DataFetcherResult } from "@/types/response.type";
+import { DataFetcherResult, QueryParams } from "@/types/response.type";
 
 const API_URL = env.API_URL;
 
 export const projectService = {
-  getProjects: async (): Promise<ApiResponse<Project>> => {
+  getProjects: async (
+    params?: QueryParams,
+  ): Promise<ApiResponse<Project[]>> => {
     try {
-      const url = `${API_URL}/api/v1/projects`;
+      const url = new URL(`${API_URL}/api/v1/projects`);
 
-      const response = await fetch(url);
+      if (params) {
+        Object.entries(params).forEach(([key, value]) => {
+          if (!value) return;
+          if (Array.isArray(value)) {
+            value.forEach((v) => {
+              url.searchParams.append(key, String(v));
+            });
+            return;
+          }
+
+          url.searchParams.append(key, String(value));
+        });
+      }
+
+      const response = await fetch(url.toString());
 
       if (!response.ok) {
         return {
