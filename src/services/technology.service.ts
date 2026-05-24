@@ -13,13 +13,19 @@ export const technologyService = {
 
       if (params) {
         Object.entries(params).forEach(([key, value]) => {
-          if (value) {
-            url.searchParams.append(key, value.toString());
+          if (!value) return;
+          if (Array.isArray(value)) {
+            value.forEach((v) => {
+              url.searchParams.append(key, String(v));
+            });
+            return;
           }
+
+          url.searchParams.append(key, String(value));
         });
       }
 
-      const response = await fetch(url);
+      const response = await fetch(url.toString());
 
       if (!response.ok) {
         return {

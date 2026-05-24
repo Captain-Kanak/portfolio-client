@@ -34,5 +34,5 @@ export interface QueryParams {
   sortOrder?: "asc" | "desc";
   selects?: string;
   includes?: string;
-  [key: string]: string | undefined;
+  [key: string]: string | unknown | undefined;
 }
