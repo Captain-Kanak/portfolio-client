@@ -11,14 +11,14 @@ export default function HomePage() {
       {/* HERO SECTION */}
       <HeroSection />
 
-      {/* ABOUT SECTION */}
-      <AboutSection />
+      {/* FEATURED PROJECTS SECTION */}
+      <ProjectSection />
 
       {/* SKILLS MATRIX SECTION */}
       <SkillsSection />
 
-      {/* FEATURED PROJECTS SECTION */}
-      <ProjectSection />
+      {/* ABOUT SECTION */}
+      <AboutSection />
 
       {/* CONTACT CTA SECTION */}
       <ContactSection />

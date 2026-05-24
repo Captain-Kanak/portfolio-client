@@ -15,7 +15,7 @@ export default function AboutSection() {
       <div className="flex flex-col space-y-2 mb-16 text-left">
         <div className="flex items-center gap-2 text-primary font-mono text-sm tracking-wider uppercase">
           <Terminal className="w-4 h-4" />
-          <span>01. Biography</span>
+          <span>03. Biography</span>
         </div>
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground flex items-center gap-2.5">
           <User className="w-7 h-7 text-primary/80" /> About Me
