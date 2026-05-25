@@ -28,7 +28,7 @@ export default function Footer() {
         {/* SOCIAL LINKS ARCHITECTURE */}
         <div className="flex items-center gap-4">
           <Link
-            href="https://github.com"
+            href="https://github.com/Captain-Kanak"
             target="_blank"
             rel="noreferrer"
             className="p-2 rounded-md border border-border/60 bg-muted/20 text-muted-foreground hover:text-foreground hover:border-border hover:bg-muted/50 transition-all duration-200"
@@ -37,7 +37,7 @@ export default function Footer() {
             <FaGithub className="w-4 h-4" />
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/captain-kanak"
             target="_blank"
             rel="noreferrer"
             className="p-2 rounded-md border border-border/60 bg-muted/20 text-muted-foreground hover:text-primary hover:border-primary/20 hover:bg-primary/5 transition-all duration-200"
@@ -46,7 +46,7 @@ export default function Footer() {
             <FaLinkedin className="w-4 h-4" />
           </Link>
           <Link
-            href="mailto:your.email@example.com"
+            href="mailto:kanakroy835@gmail.com"
             className="p-2 rounded-md border border-border/60 bg-muted/20 text-muted-foreground hover:text-emerald-400 hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all duration-200"
             aria-label="Email Contact"
           >

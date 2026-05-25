@@ -20,7 +20,7 @@ export default function ContactSection() {
         </p>
         <div className="pt-4">
           <Button size="lg" asChild className="gap-2">
-            <Link href="mailto:your.email@example.com">
+            <Link href="mailto:kanakroy835@gmail.com">
               <Mail className="w-4 h-4" /> Get In Touch
             </Link>
           </Button>
