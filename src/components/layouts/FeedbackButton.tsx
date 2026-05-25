@@ -1,10 +1,9 @@
-"use strict";
-
 "use client";
 
 import React from "react";
 import { MessageSquarePlus } from "lucide-react";
 import { Button } from "../ui/button";
+import { toast } from "sonner";
 
 interface FeedbackButtonProps {
   projectId: string;
@@ -16,12 +15,11 @@ export function FeedbackButton({
   projectTitle,
 }: FeedbackButtonProps) {
   const handleOpenFeedbackModal = () => {
-    // 1. Hook up your state manager or context dispatch mechanisms here
-    // 2. Or pass it directly to an active shadcn <DialogTrigger /> element frame wrapper
-    console.log(
-      `Opening custom review modal payload target parameter context for: ${projectTitle} (${projectId})`,
-    );
-    alert(`Modal open trigger logic goes here for: "${projectTitle}"`);
+    const toastId = toast.loading("Loading...");
+
+    setTimeout(() => {
+      toast.info("This feature is coming soon.", { id: toastId });
+    }, 1000);
   };
 
   return (
