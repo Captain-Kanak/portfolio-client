@@ -2,12 +2,16 @@ import React from "react";
 import Link from "next/link";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { Terminal, CheckCircle2, ArrowRight } from "lucide-react";
+import { Terminal, CheckCircle2, FileText, Download } from "lucide-react";
 import { TypingEffect } from "./TypingEffect";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaFacebook } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 
 export default function HeroSection() {
+  const RESUME_VIEW_URL =
+    "https://drive.google.com/file/d/1mrI8fDyX6nRfZDkieumQoKlPWMefxs5k/view";
+  const RESUME_DOWNLOAD_PATH = "/resume.pdf";
+
   return (
     <section
       id="intro"
@@ -106,67 +110,92 @@ export default function HeroSection() {
                   +880 17042 10835
                 </a>
               </div>
+              <div>
+                {/* GitHub Icon Button */}
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="icon"
+                  className="cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-muted/80 rounded-xl"
+                >
+                  <Link
+                    href="https://github.com/Captain-Kanak"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Profile"
+                  >
+                    <FaGithub className="w-5 h-5 text-foreground/80 hover:text-foreground transition-colors" />
+                  </Link>
+                </Button>
+
+                {/* LinkedIn Icon Button */}
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="icon"
+                  className="cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-500/10 rounded-xl group/ln"
+                >
+                  <Link
+                    href="https://www.linkedin.com/in/captain-kanak"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile"
+                  >
+                    <FaLinkedin className="w-5 h-5 text-muted-foreground transition-colors group-hover/ln:text-[#0A66C2]" />
+                  </Link>
+                </Button>
+
+                {/* Facebook Icon Button */}
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="icon"
+                  className="cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600/10 rounded-xl group/fb"
+                >
+                  <Link
+                    href="https://www.facebook.com/captainkanak"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook Profile"
+                  >
+                    <FaFacebook className="w-5 h-5 text-muted-foreground transition-colors group-hover/fb:text-[#1877F2]" />
+                  </Link>
+                </Button>
+              </div>
             </div>
 
             {/* Action Row */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              {/* Primary Call to Action */}
+              {/* Primary Call to Action: View Resume */}
               <Button
                 asChild
                 variant="default"
                 className="cursor-pointer font-medium tracking-tight shadow-md shadow-primary/10 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20 group h-10 px-4 rounded-xl"
               >
-                <Link href="#" className="flex items-center gap-2">
-                  Resume
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <Link
+                  href={RESUME_VIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <FileText className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
+                  <span>View Resume</span>
                 </Link>
               </Button>
 
-              {/* GitHub Icon Button */}
+              {/* Secondary Call to Action: Download Resume */}
               <Button
                 asChild
-                variant="ghost"
-                size="icon"
-                className="cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-muted/80 rounded-xl"
+                variant="outline"
+                className="cursor-pointer font-medium tracking-tight h-10 px-4 rounded-xl border-border/80 bg-background/50 backdrop-blur-xs hover:bg-muted/40 hover:border-primary/30 transition-all duration-300 hover:-translate-y-0.5 group"
               >
                 <Link
-                  href="https://github.com/Captain-Kanak"
-                  target="_blank"
-                  aria-label="GitHub Profile"
+                  href={RESUME_DOWNLOAD_PATH}
+                  download="Kanak_Ray_Resume.pdf"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  <FaGithub className="w-5 h-5 text-foreground" />
-                </Link>
-              </Button>
-
-              {/* LinkedIn Icon Button */}
-              <Button
-                asChild
-                variant="ghost"
-                size="icon"
-                className="cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-500/10 text-muted-foreground rounded-xl"
-              >
-                <Link
-                  href="https://www.linkedin.com/in/captain-kanak"
-                  target="_blank"
-                  aria-label="LinkedIn Profile"
-                >
-                  <FaLinkedin className="w-5 h-5 text-[#0A66C2]" />
-                </Link>
-              </Button>
-
-              {/* Facebook Icon Button */}
-              <Button
-                asChild
-                variant="ghost"
-                size="icon"
-                className="cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-600/10 text-muted-foreground rounded-xl"
-              >
-                <Link
-                  href="https://www.facebook.com/captainkanak"
-                  target="_blank"
-                  aria-label="Facebook Profile"
-                >
-                  <FaFacebook className="w-5 h-5 text-[#1877F2]" />
+                  <Download className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                  <span>Download PDF</span>
                 </Link>
               </Button>
             </div>
@@ -221,7 +250,7 @@ export default function HeroSection() {
                   </span>
                 </div>
 
-                {/* Clean Static System Specs Block (Replaces the duplicate loop) */}
+                {/* Clean Static System Specs Block */}
                 <div className="space-y-1 text-xs text-muted-foreground/90 border-t border-border/20 pt-3">
                   <div>
                     <span className="text-cyan-400">OS:</span> Ubuntu 24.04 LTS
@@ -232,8 +261,8 @@ export default function HeroSection() {
                     (x86_64-ubuntu)
                   </div>
                   <div>
-                    <span className="text-cyan-400">Stack:</span> Node · Express
-                    · TS · Postgres · Prisma
+                    <span className="text-cyan-400">Stack:</span> Node &bull;
+                    Express &bull; TS &bull; Postgres &bull; Prisma
                   </div>
                 </div>
               </div>
